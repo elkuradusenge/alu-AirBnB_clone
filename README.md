@@ -1,28 +1,23 @@
 # AirBnB Clone - The Console
 
-## Description
-This project implements a command-line interpreter for managing AirBnB objects. It's the first step toward building a full web application, establishing the foundation for object management, serialization, and storage.
+**Description of the Project**
 
-## Command Interpreter
-### How to Start
-Run the console in interactive mode:
-```bash
-./console.py
-```
+This project is a basic clone of the AirBNB website. The first level creates a backend interface or console for managing program data (similar to shell). Console commands enable users to create, update, and destroy objects, as well as manage file storage.
 
-### How to Use
-- Type `help` to see available commands
-- Use `create <ClassName>` to create new instances
-- Use `show <ClassName> <id>` to display instances
-- Use `all` or `all <ClassName>` to list instances
-- Use `update <ClassName> <id> <attribute> <value>` to modify instances
-- Use `destroy <ClassName> <id>` to delete instances
+**Description of the command interpreter**
 
-### Examples
-```
-(hbnb) create User
-(hbnb) show User 1234-5678
-(hbnb) all
-(hbnb) update User 1234-5678 email "test@test.com"
-(hbnb) destroy User 1234-5678
-```
+The command interpreter is the same as the shell, but limited to a specific use-case of handling our project's objects.
+
+1. Create a new object (e.g., a new user or a new place).
+2. Get an object from a file, database, etc.
+3. Perform operations on objects, such as counting and computing statistics.
+4. Update the attributes of an object.
+5. Destroy an object.
+
+**Tasks Involved:**
+
+- put in place a parent class (called BaseModel) to take care of the initialization, serialization and deserialization of your future instances
+- create a simple flow of serialization/deserialization: Instance <-> Dictionary <-> JSON string <-> file
+- create all classes used for AirBnB (User, State, City, Place…) that inherit from BaseModel
+- create the first abstracted storage engine of the project: File storage.
+- create all unittests to validate all our classes and storage engine
